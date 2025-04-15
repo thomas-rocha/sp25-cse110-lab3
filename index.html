@@ -4,87 +4,91 @@
         <meta charset="UTF-8">
         <title>Meeting Notes</title>
         <link rel="icon" href="favicon-16x16.png">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+        </style>
     </head>
     <body>
         <div>
-            <header>
+            <header class="title">
                 <h1>First Brainstorm for Team Project</h1>
             </header>
-            <hr>
             <nav id="nav">
-                <a href="#date">Date</a>
+                <a href="#date_section">Date</a>
                 <a href="#attendance">Attendance</a>
                 <a href="#agenda">Agenda</a>
                 <a href="#questions">Questions</a>
                 <a href="#design">Project Design</a>
-                <a href="#transcripts">Audio and Video</a>
+                <a href="#media_grid">Audio and Video</a>
             </nav>
             <hr>
             <main>
-                <section id="date">
-                    <h2>Date</h2>
-                    <h3>April 8, 2025</h3>
+                <section class="dates" id="date_section">
+                    <h2 class="dates">Date: </h2>
+                    <h3 class="dates">April 8, 2025</h3>
                 </section>
                 <hr>
-                <section id="attendance">
-                    <h2>Attendance</h2>
-                    <details>
-                        <summary>List of those in attendance</summary>
+                <div class="info_grid">
+                    <section class="section"  id="attendance">
+                        <h2>Attendance</h2>
+                        <details>
+                            <summary>List of those in attendance</summary>
+                            <ul>
+                                <li>Name 1</li>
+                                <li>Name 2</li>
+                                <li>Name 3</li>
+                            </ul>                        
+                        </details>
+                    </section>
+                    <section class="section" id="agenda">
+                        <h2>Agenda</h2>
+                        <ol>
+                            <li><b>Introductions</b></li>
+                            <li><b>Review project criteria</b></li>
+                            <li><b>Brainstorming</b></li>
+                            <li><i>possible project planning if time allows</i></li>
+                        </ol>
+                        <h3>Unfinished Business</h3>
+                        <p>None. This is the first meeting. </p>
+                    </section>
+                    <section class="section" id="questions">
+                        <h2>Questions/Comments/Concerns</h2>
                         <ul>
-                            <li>Name 1</li>
-                            <li>Name 2</li>
-                            <li>Name 3</li>
-                        </ul>                        
-                    </details>
-                </section>
+                            <li><span>How will workload be distributed?</span></li>
+                            <li>Will each person contribute to one part of the project or multiple?</li>
+                            <li>How will meetings be organized?</li>
+                        </ul>
+                    </section>
+                </div>
                 <hr>
-                <section id="agenda">
-                    <h2>Agenda</h2>
-                    <ol>
-                        <li><b>Introductions</b></li>
-                        <li><b>Review project criteria</b></li>
-                        <li><b>Brainstorming</b></li>
-                        <li><i>possible project planning if time allows</i></li>
-                    </ol>
-                    <h3>Unfinished Business</h3>
-                    <p>None. This is the first meeting. </p>
-                </section>
-                <hr>
-                <section id="questions">
-                    <h2>Questions/Comments/Concerns</h2>
-                    <ul>
-                        <li><span>How will workload be distributed?</span></li>
-                        <li>Will each person contribute to one part of the project or multiple?</li>
-                        <li>How will meetings be organized?</li>
-                    </ul>
-                </section>
-                <hr>
-                <section id="design">
+                <section class="section" id="design">
                     <h2>Design</h2>
                     <img src="sample_design.png" alt="sample design" width="1000">
                     <br>
                     <p>Note: this is <em>not</em> the final design, just a rough draft. </p>
                 </section>
                 <hr>
-                <section id="transcripts">
-                    <h2>Meeting Audio</h2>
-                    <audio controls>
-                        <source src="IMG_9408.mp3" type="audio/mpeg">
-                        The audio could not be displayed
-                    </audio>
-                </section>
+                <div class="media_grid" id="media_grid">
+                    <section class="section" id="audio">
+                        <h2>Meeting Audio</h2>
+                        <audio controls>
+                            <source src="IMG_9408.mp3" type="audio/mpeg">
+                            The audio could not be displayed
+                        </audio>
+                    </section>
+                    <section class="section" id="video">
+                        <h2>Meeting Video</h2>
+                        <video width="360" controls>
+                            <source src="IMG_9408.mp4" type="video/mp4">
+                           <strong>The video could not be rendered.</strong> 
+                        </video>
+                    </section>
+                </div>
                 <hr>
-                <section>
-                    <h2>Meeting Video</h2>
-                    <video width="360" controls>
-                        <source src="IMG_9408.mp4" type="video/mp4">
-                       <strong>The video could not be rendered.</strong> 
-                    </video>
-                </section>
-                <hr>
-                <section>
+                <section class="section" >
                     <h2>Get-To-Know-You Form</h2>
-                    <form action="/submit-form" method="POST">
+                    <form action="/submit-form" method="POST" class="form">
                         <fieldset>
                           <legend>Personal Information</legend>
                       
@@ -141,7 +145,7 @@
                           <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
                         </fieldset><br>
                       
-                        <button type="submit">Submit</button>
+                        <button type="submit" id="submit">Submit</button>
                       </form>
                 </section>
             </main>
