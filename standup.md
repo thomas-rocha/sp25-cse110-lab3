@@ -24,7 +24,6 @@ Write any ideas that address concerns that participants brought up.
 
 - [ ] Task 1 - assigned to ___
 - [ ] Task 2 - assigned to ___
-
 ...
 
 ## Time for next meeting
