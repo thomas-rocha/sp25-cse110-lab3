@@ -1,0 +1,147 @@
+/* applied to all elements 
+ Sets background of all elements to the same color, same font*/
+* {
+    font-family: "Oswald", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(255, 247, 234, 100);
+    margin-left: 3px;
+  }
+
+@media (width < 300px){
+    * {
+        font-size: 10px;
+    }
+}
+
+/* Styles the title. Large and centered.*/
+.title {
+    font-size: 24px;
+    text-align: center;
+    padding: 0.25in 0 0 0;
+    color: #000000;
+    margin: 0.5em 0 0 0;
+    
+
+}
+h2 + h3 {
+    font-size: 15px
+}
+legend ~ label { 
+    text-decoration: underline;
+}
+/* Styles all hyperlinks on the page.*/
+a {
+    color: rgb(64, 129, 241);
+    margin: auto;    
+    text-decoration: underline wavy;
+
+}
+a:hover{
+    color: rgb(0, 170, 255);
+}
+a:active{
+    color: red;
+}
+/* Centers nav bar and keeps it on page at all times for easy navigation. */
+#nav {
+    text-align: center;
+    position: sticky;
+    top: 0px;
+}
+/* Better visualization of line breaks. */
+hr {
+    border-color: royalblue;
+    border-style: solid;
+    border-width: 0.2rem;
+    margin: 1em 0 1em 0;
+}
+main hr {
+    border-color: royalblue;
+    border-style: dotted;
+    border-width: 0.05rem;
+    margin: 1em 0 1em 0;
+}
+/* Creates a rounded box around each section for easy viewing. */
+.section, main{
+    border-color: black;
+    border-radius: 0.25in;
+    border-width: 1mm;
+    border-style: solid;
+    padding: 0.5em;
+    word-wrap: break-word;
+    display: block;
+}
+div:has(+ hr){
+    border-color: black;
+    border-radius: 0.3in;
+    border-width: 1mm;
+    border-style: solid;
+    padding: 0.25em;
+}
+.heading{
+    display: inline;
+}
+/* Keeps the date box compact. */
+h2.dates, h3.dates{
+    display: inline;
+}
+/* Keeps the image size proportional to the page across many viewing browsers.*/
+img {
+    width: 80vw;
+    height: 40vw;
+    max-width: 8in;
+    max-height: 4in;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: none;
+}
+.info_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#date_section {
+    display: inline;
+    padding: 1em;
+}
+#attendance {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+#agenda {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+#questions {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.media_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+button[type="submit"]{
+    background-color: royalblue;
+    color: white;
+}
+section > h2 {
+    text-decoration: underline;
+
+}
+.form {
+    textarea {
+        background-color: white;
+    }
+}
