@@ -36,7 +36,6 @@ a {
     color: rgb(64, 129, 241);
     margin: auto;    
     text-decoration: underline wavy;
-
 }
 a:hover{
     color: rgb(0, 170, 255);
